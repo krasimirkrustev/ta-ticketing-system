@@ -1,0 +1,14 @@
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\WebApp.Entities.dll.config
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\WebApp.Entities.dll
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\WebApp.Entities.pdb
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\EntityFramework.dll
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\EntityFramework.xml
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\obj\Debug\WebApp.Entities.csprojResolveAssemblyReference.cache
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\obj\Debug\WebApp.Entities.dll
+D:\Working\Telerik Academy Projects\TicketingSystem\TicketingSystem\WebApp.Entities\obj\Debug\WebApp.Entities.pdb

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WebApp.Models.TicketViewModel>
+
+@{
+    ViewBag.Title = "Search result";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+    @for (int i = 0; i < Model.Count(); i++)
+{
+    var ticket = Model.ElementAt(i);
+    <div class="row-fluid">
+        <div class="span4">
+            @ticket.Title
+        </div>
+        <div class="span4">
+            @ticket.CategoryName
+        </div>
+        <div class="span4">
+            @ticket.AuthorName
+        </div>
+    </div>
+}

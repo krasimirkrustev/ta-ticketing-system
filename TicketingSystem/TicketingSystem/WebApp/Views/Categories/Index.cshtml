@@ -1,0 +1,40 @@
+﻿@using WebApp.Models
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@(Html.Kendo()
+.Grid<CategoryViewModel>()
+.Name("categories-grid")
+.Columns(columns =>
+{
+    columns.Bound(model => model.Name);
+    columns.Command(command => command.Edit());
+    columns.Command(command => command.Destroy());
+})
+        .Editable(editable => editable.Mode(GridEditMode.PopUp))
+            .Pageable()
+            .Sortable()
+.ToolBar(toolbar =>
+    {
+        toolbar.Create();
+    })
+.DataSource(data =>
+{
+    data.Ajax()
+        .ServerOperation(true)
+        .Model(m =>
+        {
+            m.Id(c => c.Id);
+            m.Field(c => c.Name);
+
+        })
+        .PageSize(5)
+        .Create(create => create.Action("AddCategory", "Categories"))
+        .Read(read => read.Action("GetCategories", "Categories"))
+        .Update(update => update.Action("EditCategory", "Categories"))
+        .Destroy(destroy => destroy.Action("RemoveCategory", "Categories"));
+}));

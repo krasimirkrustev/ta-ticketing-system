@@ -1,0 +1,58 @@
+﻿@model WebApp.Models.TicketFullViewModel
+
+@{
+    ViewBag.Title = "Ticketing System";
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <h1>Ticketing System</h1>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <h2>@Model.Title</h2>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <h3><strong>Category: </strong>@Model.CategoryName</h3>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span4">
+        <p><strong>Author: </strong>@Model.AuthorName</p>
+        <p><strong>Priority: </strong>@Model.Priority</p>
+    </div>
+    <div class="span4">
+        <img src="@Model.ScreenshotUrl" alt="@Model.Title" />
+    </div>
+    <div class="span4">
+        <p>@Model.Description</p>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12" id="Comments">
+        @foreach (var comment in Model.Comments)
+        {
+            @*<p><strong>@comment.AuthorName:</strong>@comment.Content</p>*@
+            @Html.Partial("_Comment", comment)
+        }
+    </div>
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+    using (Ajax.BeginForm("PostComment", new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.InsertAfter, UpdateTargetId = "Comments", OnFailure = "commentPostFailure" }))
+    {
+        @Html.Hidden("TicketId", Model.Id)
+        @Html.TextArea("comment")
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Submit comment" />
+    }
+}
+
+
+@section scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}
